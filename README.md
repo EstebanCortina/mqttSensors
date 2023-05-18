@@ -6,11 +6,12 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 ### *__18/05/2023 -- 19/05/2023__*
 - Investigar como usar websockets. (crear uno en el backend y conectarme a el desde el frontend) ✅
 
-- Investigar como usar la libreria ArduinoJSON. ❌
+- Investigar como usar la libreria ArduinoJSON. ✅
 
 - Rehacer la libreria para el ESP32 y probar en local. ❌  
-  - Quitar codigo que ya no sirve.
-  - Empaquetar la data de los sensores en un JSON.
+  - Quitar codigo que ya no sirve. __*Listo*__
+  - Añadir Multiwifi. __*Listo*__
+  - Empaquetar la data de los sensores en un JSON. __*Pendiente*__
   - Hacer publish del JSON.
 ### *__19/05/2023 -- 21/05/2023__*
 - Definir el schema de los documentos a insertar en la coleccion de MongoDB. (e investigar bien sobre los schemas de mongoose) ❌
