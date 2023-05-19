@@ -17,11 +17,21 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 
 - Definir los websockets y establecer la comunicacion en tiempo real. __*Listo*__ ✅
 ### *__19/05/2023 -- 21/05/2023__*
-- Investigar como funcionan las colecciones Time Series de MongoDB. ❌
-- Definir el schema de los documentos a insertar en la coleccion de MongoDB. (e investigar bien sobre los schemas de mongoose) ❌
+- Investigar como funcionan las colecciones Time Series de MongoDB. ✅
+  - Esquema de la BD: BD:data, Coleccion: sensores, timeField: timeStamp, metaField: sensorName, granularity: seconds.
+- Definir el schema de los documentos a insertar en la coleccion de MongoDB. ✅ 
+    ````JSON
+      {
+        "_id":objectId(),
+        "timeStamp": dateTime,
+        "sensorName": String,
+        "value": int                
+      }
+    ````
+    - Ver si es lo mejor un json con todos los valores, o jsons invidivuales para cada sensor
   - Revisar tipos de datos. __*Listo*__ (Lux=analog, humo=analog, flama=analog con el map (1,2,3))
   - Observar similitudes. __*Listo*__ (Todos tienen valores, todos se toman en un cierto tiempo y todos tienen un nombre)
-  - Aclarar dudas con Esli sobre el timestamp de las mediciones.__*Listo*__ (cada que se tomen las medidas que se mande un timestamp, sera cada 5 segundos yo creo)
+  - Aclarar dudas con Esli sobre el timestamp de las mediciones. __*Listo*__ (cada que se tomen las medidas que se mande un timestamp, sera cada 5 segundos yo creo)
 
 - Crear la base de datos y la coleccion en MongoDB. (definir si será en MongoDB Atlas o MongoDB local)❌
 
