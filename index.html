@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const socket = new WebSocket('ws://localhost:1955'); // Reemplaza la dirección con la URL del servidor WebSocket
+
+    // Evento 'open' para manejar la conexión exitosa
+    socket.addEventListener('open', () => {
+      console.log('Conexión WebSocket establecida');
+
+      // Puedes enviar un mensaje al servidor si es necesario
+      // socket.send('Mensaje de prueba');
+    });
+
+    // Evento 'message' para manejar los mensajes recibidos del servidor
+    socket.addEventListener('message', (event) => {
+      const datos = JSON.parse(event.data);
+      console.log('Datos recibidos del servidor:', datos);
+
+      // Procesar los datos recibidos como sea necesario
+    });
+
+    // Evento 'close' para manejar la desconexión del servidor
+    socket.addEventListener('close', () => {
+      console.log('Conexión WebSocket cerrada');
+    });
+
+  </script>
+</body>
+
+</html>

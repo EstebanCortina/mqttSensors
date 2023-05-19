@@ -11,8 +11,11 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 - Rehacer la libreria para el ESP32 y probar en local. ❌  
   - Quitar codigo que ya no sirve. __*Listo*__
   - Añadir Multiwifi. __*Listo*__
-  - Empaquetar la data de los sensores en un JSON. __*Pendiente*__
-  - Hacer publish del JSON.
+  - Empaquetar la data de los sensores en un JSON. __*Pendiente*__ (Necesito mas cables para conectar los demas sensores, pero ya mando el luxometro en Json)
+  - Hacer publish del JSON. __*Listo*__
+  - Revisar que el JSON si lo reciba el servidor. __*Listo*__
+
+- Definir los websockets y establecer la comunicacion en tiempo real. __*Listo*__ ✅
 ### *__19/05/2023 -- 21/05/2023__*
 - Definir el schema de los documentos a insertar en la coleccion de MongoDB. (e investigar bien sobre los schemas de mongoose) ❌
   - Revisar tipos de datos.

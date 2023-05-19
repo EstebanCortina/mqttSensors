@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
+const apiController = require('../controllers/apiController.js');
+router.get('/', apiController);
 
-router.get('/', (req, res) => {
-  res.send('msg');
-})
+
 
 module.exports = router;
