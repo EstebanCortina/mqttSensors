@@ -18,9 +18,9 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 - Definir los websockets y establecer la comunicacion en tiempo real. __*Listo*__ ✅
 ### *__19/05/2023 -- 21/05/2023__*
 - Definir el schema de los documentos a insertar en la coleccion de MongoDB. (e investigar bien sobre los schemas de mongoose) ❌
-  - Revisar tipos de datos.
-  - Observar similitudes.
-  - Aclarar dudas con Esli sobre el timestamp de las mediciones.
+  - Revisar tipos de datos. __*Listo*__ (Lux=analog, humo=analog, flama=analog con el map (1,2,3))
+  - Observar similitudes. __*Listo*__ (Todos tienen valores, todos se toman en un cierto tiempo y todos tienen un nombre)
+  - Aclarar dudas con Esli sobre el timestamp de las mediciones.__*Listo*__ (cada que se tomen las medidas que se mande un timestamp, sera cada 5 segundos yo creo)
 
 - Crear la base de datos y la coleccion en MongoDB. (definir si será en MongoDB Atlas o MongoDB local)❌
 
