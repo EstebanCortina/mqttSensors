@@ -17,6 +17,7 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 
 - Definir los websockets y establecer la comunicacion en tiempo real. __*Listo*__ ✅
 ### *__19/05/2023 -- 21/05/2023__*
+- Investigar como funcionan las colecciones Time Series de MongoDB. ❌
 - Definir el schema de los documentos a insertar en la coleccion de MongoDB. (e investigar bien sobre los schemas de mongoose) ❌
   - Revisar tipos de datos. __*Listo*__ (Lux=analog, humo=analog, flama=analog con el map (1,2,3))
   - Observar similitudes. __*Listo*__ (Todos tienen valores, todos se toman en un cierto tiempo y todos tienen un nombre)
