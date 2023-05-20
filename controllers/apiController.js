@@ -1,8 +1,4 @@
-const { WSPORT } = require('../config/config.js');
-const mqtt = require('mqtt');
-const client = mqtt.connect('mqtt://test.mosquitto.org');
-const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: WSPORT });
+const { client, wss } = require('../config/config.js');
 
 
 client.on('connect', () => {
