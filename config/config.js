@@ -17,7 +17,8 @@ module.exports = {
   PORT: process.env.PORT || 3000,
   DB: db,
   client: client,
-  wss: wss
+  wss: wss,
+  WebSocket: WebSocket
 }
 
 

@@ -8,10 +8,10 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 
 - Investigar como usar la libreria ArduinoJSON. ✅
 
-- Rehacer la libreria para el ESP32 y probar en local. ❌  
+- Rehacer la libreria para el ESP32 y probar en local. ✅  
   - Quitar codigo que ya no sirve. __*Listo*__
   - Añadir Multiwifi. __*Listo*__
-  - Empaquetar la data de los sensores en un JSON. __*Pendiente*__ (Necesito mas cables para conectar los demas sensores, pero ya mando el luxometro en Json)
+  - Empaquetar la data de los sensores en un JSON. __*Pendiente*__ (Necesito mas cables para conectar los demas sensores, pero ya mando el luxometro en Json y volver a checar que pines pueden ser analog)
   - Hacer publish del JSON. __*Listo*__
   - Revisar que el JSON si lo reciba el servidor. __*Listo*__
 
@@ -33,15 +33,19 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
   - Observar similitudes. __*Listo*__ (Todos tienen valores, todos se toman en un cierto tiempo y todos tienen un nombre)
   - Aclarar dudas con Esli sobre el timestamp de las mediciones. __*Listo*__ (cada que se tomen las medidas que se mande un timestamp, sera cada 5 segundos yo creo)
 
-- Crear la base de datos y la coleccion en MongoDB. (definir si será en MongoDB Atlas o MongoDB local)❌
+- Crear la base de datos y la coleccion en MongoDB. ✅ (Sera en MongoDB Atlas con las Time Series pero se definira que los registros de hace 5 minutos se borren y asi no pasar el limite de 512 mb.)
 
-- Conectar la base de datos a la aplicacion. ❌
+- Conectar la base de datos a la aplicacion. ✅ (se esta probando en local pero ya esta la conexion)
 ### *__21/05/2023 -- fecha de entrega__*
-- Analizar la factibilidad de usar una funcion Lambda para guardar los documentos. (si es factible, entonces debera usarse MongoDB Atlas) ❌
+- Analizar la factibilidad de usar una funcion Lambda para guardar los documentos. ❌
 
 - Testear, aprobar y refactorizar. ❌
 
 - Implementar con el front-end. ❌
-  - Crear websockets para la comunicacion en neartime. Esta en mi chatgpt.
+  - Crear websockets para la comunicacion en neartime. Esta en mi chatgpt. __*Listo*__ 
+  - Revisar que las graficas den lectura correctamente. 
+  - Reorganizar el front para consistencia
+  - Si hay tiempo implementar Vue.js como front.
 
-- Si hay tiempo, ver lo de hacer reportes de la coleccion. ❌
+- Si hay tiempo, ver lo de hacer reportes de la coleccion. (ya me dijo esli que la misma libreria te hace reportes automaticos)❌
+
