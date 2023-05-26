@@ -39,15 +39,15 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
 
 - Conectar la base de datos a la aplicacion. ✅ (se esta probando en local pero ya esta la conexion)
 ### *__21/05/2023 -- fecha de entrega__*
-- Analizar la factibilidad de usar una funcion Lambda para guardar los documentos. ❌
+- Analizar la factibilidad de usar una funcion Lambda para guardar los documentos. ✅(no)
 
 - Testear, aprobar y refactorizar. ❌
 
-- Implementar con el front-end. ❌
+- Implementar con el front-end. ❌(hay problemas, ver mas opciones mas faciles)
   - Crear websockets para la comunicacion en neartime. Esta en mi chatgpt. __*Listo*__ 
   - Revisar que las graficas den lectura correctamente. 
   - Reorganizar el front para consistencia
-  - Si hay tiempo implementar Vue.js como front.
+  - Si hay tiempo implementar Vue.js como front. (no)
 
 - Si hay tiempo, ver lo de hacer reportes de la coleccion. (ya me dijo esli que la misma libreria te hace reportes automaticos)❌
 
