@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <h1>Index</h1>
+    <button id="foco1">Encender1</button>
+    <button id="foco2">Encender2</button>
+    <button id="foco3">Encender3</button>
+    <button id="foco4">Encender4</button>
+  </div>
+  <script>
+    const ws = new WebSocket('ws://localhost:3001/api');
+
+    ws.onopen = () => {
+      console.log("Conectado");
+    }
+    ws.onmessage = (message) => {
+      const messageObj = JSON.parse(message.data)
+      console.log(messageObj);
+    }
+
+    const foco1 = document.getElementById('foco1');
+    const foco2 = document.getElementById('foco2');
+    const foco3 = document.getElementById('foco3');
+    const foco4 = document.getElementById('foco4');
+
+    foco1.addEventListener('click', () => {
+      ws.send(JSON.stringify({ "type": 1 }));
+    });
+    foco2.addEventListener('click', () => {
+
+    });
+    foco3.addEventListener('click', () => {
+
+    });
+    foco4.addEventListener('click', () => {
+
+    });
+  </script>
+</body>
+
+</html>

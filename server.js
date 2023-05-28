@@ -1,21 +1,13 @@
-const { HOST, PORT } = require('./config/config.js');
-const express = require('express');
-const app = express();
-
-
-
-
-app.get('/', (req, res) => {
-  res.send("<h1>Usar /api</h1>");
-})
+const { PORT } = require('./config/config.js');
+const app = require('./config/expressConfig.js');
+const { server } = require('./config/wssConfig.js');
 
 
 const router = require('./routes');
-app.use('/api', router);
+app.use('/', router);
 
 
-
-app.listen(PORT, HOST, () => {
-  console.log(`Running on ${HOST}:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Running on ${PORT}`);
 });
 
