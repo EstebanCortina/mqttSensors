@@ -19,7 +19,7 @@ module.exports = (ws) => {
 
       messageObj.forEach(sensor => {
         const fechaActual = new Date();
-
+        console.log(fechaActual);
         const fechaISO = fechaActual.toISOString();
 
         //Agregar fecha al objeto de respuesta.
