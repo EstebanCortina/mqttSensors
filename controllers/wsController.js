@@ -23,7 +23,7 @@ module.exports = (ws) => {
         const fechaISO = fechaActual.toISOString();
 
         //Agregar fecha al objeto de respuesta.
-        sensor.timeStamp = fechaLocal;
+        sensor.timeStamp = fechaActual;
         (async () => {
           try {
             const nuevoDocumento = new Data({
