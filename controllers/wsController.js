@@ -27,7 +27,7 @@ module.exports = (ws) => {
 
 
         const fechaISO = fechaActual.toISOString();
-        console.log(fechaActul);
+        console.log(fechaActual);
 
         //Agregar fecha al objeto de respuesta.
         sensor.timeStamp = fechaActual;
