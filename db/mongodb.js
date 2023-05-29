@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uri = 'mongodb://127.0.0.1:27017/data2';
+const uri = 'mongodb+srv://ecortina:universidad098@cluster0.llifhyn.mongodb.net/data2?retryWrites=true&w=majority';
 
 const dbConnect = async () => {
   try {
