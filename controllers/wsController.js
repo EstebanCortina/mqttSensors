@@ -19,8 +19,7 @@ module.exports = (ws) => {
 
       messageObj.forEach(sensor => {
         const fechaActual = new Date();
-        const offset = (fechaActual.getTimezoneOffset() + 60) * 60 * 1000;
-        const fechaLocal = new Date(fechaActual.getTime() - offset);
+
         const fechaISO = fechaLocal.toISOString();
 
         //Agregar fecha al objeto de respuesta.
