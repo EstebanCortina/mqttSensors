@@ -17,7 +17,7 @@
     <button id="foco4">Encender4</button>
   </div>
   <script>
-    const ws = new WebSocket('wss://mqttsensors.onrender.com/api');
+    const ws = new WebSocket('ws://localhost:3001/api');
 
     ws.onopen = () => {
       console.log("Conectado");
