@@ -19,8 +19,15 @@ module.exports = (ws) => {
 
       messageObj.forEach(sensor => {
         const fechaActual = new Date();
-        console.log(fechaActual);
+        const offsetHorario = -6 * 60 * 60 * 1000; // Convertir 6 horas a milisegundos
+
+        // Aplicar el desplazamiento horario
+        fechaActual.setTime(fechaActual.getTime() + offsetHorario);
+
+
+
         const fechaISO = fechaActual.toISOString();
+        console.log(fechaActul);
 
         //Agregar fecha al objeto de respuesta.
         sensor.timeStamp = fechaActual;
