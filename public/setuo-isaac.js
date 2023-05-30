@@ -39,7 +39,7 @@ am5.ready(function () {
   var xAxis = chart.xAxes.push(
     am5xy.ValueAxis.new(root, {
       maxDeviation: 0,
-      min: 0,
+      min: 1,
       max: 3,
       strictMinMax: true,
       renderer: axisRenderer,
@@ -49,7 +49,7 @@ am5.ready(function () {
   // Add clock hand
   // https://www.amcharts.com/docs/v5/charts/radar-chart/gauge-charts/#Clock_hands
   var axisDataItem = xAxis.makeDataItem({});
-  axisDataItem.set("value", 0);
+  axisDataItem.set("value", 1);
 
   var bullet = axisDataItem.set(
     "bullet",
