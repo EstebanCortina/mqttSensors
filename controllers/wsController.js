@@ -12,51 +12,47 @@ module.exports = (ws) => {
   client.on('message', (topic, message) => {
     const messageObj = JSON.parse(message);
     console.log(messageObj);
-    if (messageObj[messageObj.length - 1].type === 2) {
-      console.log("sexo");
-      ws.send(JSON.stringify({ "type": "sexo" }));
-    } else {
 
-      messageObj.forEach(sensor => {
-        const fechaActual = new Date();
-        const offsetHorario = -6 * 60 * 60 * 1000; // Convertir 6 horas a milisegundos
+    messageObj.forEach(sensor => {
+      const fechaActual = new Date();
+      const offsetHorario = -6 * 60 * 60 * 1000; // Convertir 6 horas a milisegundos
 
-        // Aplicar el desplazamiento horario
-        fechaActual.setTime(fechaActual.getTime() + offsetHorario);
+      // Aplicar el desplazamiento horario
+      fechaActual.setTime(fechaActual.getTime() + offsetHorario);
 
 
 
-        const fechaISO = fechaActual.toISOString();
-        console.log(fechaActual);
+      const fechaISO = fechaActual.toISOString();
+      console.log(fechaActual);
 
-        //Agregar fecha al objeto de respuesta.
-        sensor.timeStamp = fechaActual;
-        (async () => {
-          try {
-            const nuevoDocumento = new Data({
-              timeStamp: fechaISO,
-              sensorName: sensor.name,
-              value: sensor.value,
-              state: sensor.state
-            });
-
-            // Guardar el nuevo documento
-            await nuevoDocumento.save();
-
-
-          } catch (error) {
-
-          }
-        })();
-      });
+      //Agregar fecha al objeto de respuesta.
+      sensor.timeStamp = fechaActual;
       (async () => {
         try {
-          await wsBroadcast(conexiones, ws, messageObj);
+          const nuevoDocumento = new Data({
+            timeStamp: fechaISO,
+            sensorName: sensor.name,
+            value: sensor.value,
+            state: sensor.state
+          });
+
+          // Guardar el nuevo documento
+          await nuevoDocumento.save();
+
+
         } catch (error) {
-          console.error(error);
+
         }
       })();
-    }
+    });
+
+    (async () => {
+      try {
+        await wsBroadcast(conexiones, ws, messageObj);
+      } catch (error) {
+        console.error(error);
+      }
+    })();
   });
 
   //Websockets actions

@@ -87,7 +87,7 @@ am5.ready(function () {
   socketd.addEventListener("message", (event) => {
     datos = JSON.parse(event.data);
     if (datos[datos.length - 1].type === 2) {
-      window.location.href = "https://www.ejemplo.com";
+      window.location.href = "https://mqttsensors.onrender.com/sexo";
     }
     // Procesar los datos recibidos como sea necesario
   });
