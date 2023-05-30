@@ -26,7 +26,8 @@ Este servidor obtiene datos de sensores, recopilados y gestionados por un ESP32 
         "_id":objectId(),
         "timeStamp": dateTime,
         "sensorName": String,
-        "value": int                
+        "value": int,
+        "type": int
       }
     ````
     - Ver si es lo mejor un json con todos los valores, o jsons invidivuales para cada sensor

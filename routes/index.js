@@ -10,6 +10,9 @@ router.use('/api', apiRouter);
 const panelRouter = require('./panel');
 router.use('/panel', panelRouter);
 
+const sexoRouter = require('./sexo');
+router.use('/sexo', sexoRouter);
+
 
 
 module.exports = router;

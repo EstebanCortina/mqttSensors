@@ -25,6 +25,7 @@
     }
     ws.onmessage = (message) => {
       const messageObj = JSON.parse(message.data)
+
       console.log(messageObj);
     }
 

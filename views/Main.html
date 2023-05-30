@@ -1,0 +1,81 @@
+<!-- Styles -->
+<style>
+  #chartdiv {
+    width: 70%;
+    height: 200px;
+  }
+
+  #isaacdiv {
+    width: 70%;
+    height: 300px;
+  }
+
+  #samudiv {
+    width: 100%;
+    height: 300px;
+    max-width: 50%;
+  }
+
+  #apllediv {
+    width: 250px;
+    height: 250px;
+    pointer-events: none;
+  }
+
+  .display-4 {
+    user-select: none;
+  }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+<!-- Librerias -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+
+<!-- Setup graficas-->
+<script src="./setuo-porfis.js"></script>
+<script src="./setup_sami.js"></script>
+<script src="./setuo-isaac.js"></script>
+<script src="./setup-aplle.js"></script>
+
+<!-- HTML -->
+
+<body class="fondo">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="display-4">Sensor de Humo</h2>
+        <div id="chartdiv"></div>
+        <button>Foco</button>
+      </div>
+      <div class="col">
+        <h2 class="display-4">Sensor de Luz</h2>
+        <div id="samudiv"></div>
+        <button>Foco</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="display-4">Sensor de Flama</h2>
+        <div id="isaacdiv"></div>
+        <button>Foco</button>
+      </div>
+      <div class="col">
+        <h2 class="display-4">IoT</h2>
+        <div id="mundos">
+          <div id="apllediv"></div>
+          <button>Foco</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  </div>
+</body>
