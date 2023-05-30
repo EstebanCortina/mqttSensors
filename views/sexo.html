@@ -5,12 +5,111 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>S E X O</title>
+  <style>
+    body {
+      position: relative;
+      height: 100vh;
+      /* Ajusta la altura según tus necesidades */
+      overflow: hidden;
+    }
+
+    .flying-image {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      transform: translate(-50%, -50%);
+      animation: flying 10s linear infinite;
+    }
+
+    .flying-image2 {
+      position: absolute;
+      top: 250px;
+      left: 250px;
+      transform: translate(-50%, -50%);
+      animation: flying2 10s linear infinite;
+    }
+
+    .flying-image3 {
+      position: absolute;
+      top: 400px;
+      left: 200px;
+      transform: translate(-50%, -50%);
+      animation: flying3 10s linear infinite;
+    }
+
+    .flying-image4 {
+      position: absolute;
+      width: 250px;
+      top: 400px;
+      right: 80px;
+      transform: translate(-50%, -50%);
+      animation: flying4 10s linear infinite;
+    }
+
+    @keyframes flying {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        transform: translate(calc(-50% + 500px), calc(-50% + 200px));
+      }
+    }
+
+    @keyframes flying2 {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        transform: translate(calc(-50% - 250px), calc(-50% - 200px));
+      }
+    }
+
+    @keyframes flying3 {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        transform: translate(calc(-50% - 250px), calc(-50% + 200px));
+      }
+    }
+
+    @keyframes flying4 {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        transform: translate(calc(-50% + 250px), calc(-50% + 200px));
+      }
+    }
+  </style>
 </head>
 
-<body>
-  <h1>S E X O</h1>
-  <video id="miVideo" src="media/sexmode.mp4" width="720" height="480" controls></video>
+<body style="background-color: pink;">
+  <h1 style="text-align: center; margin: 1px;">¿Listo?</h1>
+  <div style=" display: flex;
+    justify-content: center;
+    align-items: center;">
+    <video id="miVideo" src="media/sexmode.mp4" width="720" height="480" controls></video>
+  </div>
+
+  <img src="media/s1.jpg" alt="Imagen 1" class="flying-image">
+  <img src="media/s2.jpg" alt="Imagen 2" class="flying-image2">
+  <img src="media/s3.jpg" alt="Imagen 3" class="flying-image3">
+  <img src="media/s4.jpg" alt="Imagen 4" class="flying-image4">
+
+
+
+
 </body>
+
+<script>
+  /***** Corazones cayendo en el blog *****/
+  if (typeof $pdj == 'undefined') { document.write('<' + 'script'); document.write(' language="javascript"'); document.write(' type="text/javascript"'); document.write(' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">'); document.write('</' + 'script' + '>') }</script>
+<script>if (typeof $pdj == 'undefined') { var $pdj = jQuery.noConflict() } if (!image_urls) { var image_urls = Array() } if (!flash_urls) { var flash_urls = Array() } image_urls['corazon'] = "http://lh6.googleusercontent.com/-7-WYEBOVd7c/TzMiej4AFcI/AAAAAAAACLc/w2Fn6N9jwIU/s32/heart.png"; $pdj(document).ready(function () { var c = $pdj(window).width(); var d = $pdj(window).height(); var e = function (a, b) { return Math.round(a + (Math.random() * (b - a))) }; var f = function (a) { setTimeout(function () { a.css({ left: e(0, c) + 'px', top: '-30px', display: 'block', opacity: '0.' + e(10, 100) }).animate({ top: (d - 10) + 'px' }, e(8500, 10000), function () { $pdj(this).fadeOut('slow', function () { f(a) }) }) }, e(1, 9000)) }; $pdj('<div></div>').attr('id', 'corazonDiv').css({ position: 'fixed', width: (c - 20) + 'px', height: '1px', left: '0px', top: '-5px', display: 'block' }).appendTo('body'); for (var i = 1; i <= 15; i++) { var g = $pdj('<img/>').attr('src', image_urls['corazon']).css({ position: 'absolute', left: e(0, c) + 'px', top: '-30px', display: 'block', opacity: '0.' + e(10, 100), 'margin-left': 0 }).addClass('corazonDrop').appendTo('#corazonDiv'); f(g); g = null }; var h = 0; var j = 0; $pdj(window).resize(function () { c = $pdj(window).width(); d = $pdj(window).height() }) });</script>
 
 </html>

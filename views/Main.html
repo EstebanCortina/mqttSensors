@@ -51,12 +51,12 @@
       <div class="col">
         <h2 class="display-4">Sensor de Humo</h2>
         <div id="chartdiv"></div>
-        <button>Foco</button>
+        <button id="focoHumo">Foco</button>
       </div>
       <div class="col">
         <h2 class="display-4">Sensor de Luz</h2>
         <div id="samudiv"></div>
-        <button>Foco</button>
+        <button id="focoLux">Foco</button>
       </div>
     </div>
   </div>
@@ -65,17 +65,37 @@
       <div class="col">
         <h2 class="display-4">Sensor de Flama</h2>
         <div id="isaacdiv"></div>
-        <button>Foco</button>
+        <button id="focoFlama">Foco</button>
       </div>
       <div class="col">
         <h2 class="display-4">IoT</h2>
         <div id="mundos">
           <div id="apllediv"></div>
-          <button>Foco</button>
+          <button id="focoMqtt">Foco</button>
         </div>
       </div>
     </div>
   </div>
   <div class="container">
   </div>
+  <script>
+    const ws = new WebSocket('wss://mqttsensors.onrender.com/api');
+    const focoLux = document.getElementById('focoLuz');
+    const focoFlama = document.getElementById('focoFlama');
+    const focoHumo = document.getElementById('focoHumo');
+    const focoMqtt = document.getElementById('focoMqtt');
+
+    focoLux.addEventListener('click', () => {
+      ws.send(JSON.stringify({ "type": 1 }));
+    })
+    focoFlama.addEventListener('click', () => {
+      ws.send(JSON.stringify({ "type": 2 }));
+    })
+    focoHumo.addEventListener('click', () => {
+      ws.send(JSON.stringify({ "type": 3 }));
+    })
+    focoMqtt.addEventListener('click', () => {
+      ws.send(JSON.stringify({ "type": 4 }));
+    })
+  </script>
 </body>

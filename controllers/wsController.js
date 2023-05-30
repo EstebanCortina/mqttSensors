@@ -63,8 +63,11 @@ module.exports = (ws) => {
       client.publish('focoEsli/api/foco1', 'Mensaje desde front');
     } else if (publish.type === 2) {
       client.publish('focoEsli/api/foco2', 'Mensaje desde front');
+    } else if (publish.type === 3) {
+      client.publish('focoEsli/api/foco3', 'Mensaje desde front');
+    } else {
+      client.publish('focoEsli/api/foco4', 'Mensaje desde front');
     }
-
   });
 
   ws.on('close', () => {
